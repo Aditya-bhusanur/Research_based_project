@@ -9,11 +9,11 @@ sensor_pin=Vx #REPLACE 'X' PIN NUMBER WITH YOUR VIRTUAL PIN NUMBER.
 def send_data_to_blynk(value):
     if value is not None:
         blynk.virtual_write(sensor_pin, value)
-blynk=blynklib.Blynk(AuthToken) #aUTH TOKEN
+blynk=blynklib.Blynk(AuthToken) #AUTH TOKEN
 
-@blynk.handle_event('CONNECETD')
-def handle_conneceted():
-    print("Blynk connceted!")
+@blynk.handle_event('CONNECTED')
+def handle_connected():
+    print("Blynk connected!")
 SerialReader=SerialReader()
 
 @blynk.run(1000)
