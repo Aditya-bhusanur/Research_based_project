@@ -18,6 +18,6 @@ SerialReader=SerialReader()
 
 @blynk.run(1000)
 def loop():
-    sensor_value=SerialReader.raed_sensor_data()
+    sensor_value=SerialReader.read_sensor_data()
     send_data_to_blynk(sensor_value)
 blynk.run()
